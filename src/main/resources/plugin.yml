@@ -7,3 +7,5 @@ Authors: [wHenriqueLSH_ ,_NightOFDays_, TheLipe, zRomaGOD_]
 commands:
   cstaff:
     aliases: [st]
+  gamemode:
+    aliases: [gm]

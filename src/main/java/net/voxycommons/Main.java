@@ -23,6 +23,7 @@ public final class Main extends JavaPlugin {
         onLoadConfig();
         InventoryManager.enable(this);
         loadCommons();
+        //
     }
 
     @Override

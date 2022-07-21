@@ -1,0 +1,168 @@
+Menus:
+  Menu_Primario:
+    nome: "&8MENU STAFF"
+    tamanho: 3
+    itens:
+      1:
+        skull:
+          use: false
+        slot: 1
+        material: "DIAMOND_BLOCK"
+        data: 0
+        nome: "&cTeste"
+        lore:
+          - "&ca"
+          - "&cb %vault_eco_balance%"
+          - "&cc"
+
+      2:
+        skull:
+          use: false
+        slot: 2
+        material: "DIAMOND_BLOCK"
+        data: 0
+        nome: "&cTeste"
+        lore:
+          - "&ca"
+          - "&cb %vault_eco_balance%"
+          - "&cc"
+
+  Menu_PlayerList:
+    nome: "&8Jogadores ONLINES"
+    itens:
+      format:
+        nome: "&a{jogador}"
+        lore:
+          - ""
+          - "&eClique aqui para obter mais"
+          - "&einformações do jogador!"
+          - ""
+
+      voltar-menu:
+        slot: 49
+        material: "SIGN"
+        data: 0
+        nome: "&cVoltar"
+        lore:
+          - ""
+          - "&cClique aqui para voltar ao menu Staff!"
+          - ""
+
+      voltar pagina:
+        nome: "&eVoltar (página anterior)"
+        lore:
+          - ""
+          - "&eClique aqui para voltar a antiga pagina!"
+          - ""
+
+      proxima pagina:
+        nome: "&ePróxima página"
+        lore:
+          - ""
+          - "&eClique aqui para ir a proxima pagina!"
+          - ""
+
+  Menu_Target:
+    nome: "&8Jogador: {target}"
+    tamanho: 6
+    itens:
+      status jogador:
+        skull:
+          use: true
+          link: false
+          skull-link-or-name: "{target}"
+        slot: 11
+        nome: "&a{target}"
+        lore:
+          - ""
+          - "&7Vida: &c%player_health_rounded% &7/ Fome: &6%player_food_level%"
+          - "&7Money: &2%vault_eco_balance_formatted%"
+          - "&7Ping: &b%player_ping% ms"
+          - ""
+          - "&eLogs:"
+          - ""
+          - "  &7Primeiro registro: &8%player_first_join_date%"
+          - "  &7Gamemode: &8%player_gamemode%"
+          - "  &7Está voando?: %player_is_flying%"
+          - "  &7Está em um veiculo?: %player_is_inside_vehicle%"
+          - "  &7Está na Whitelist?: %player_is_whitelisted%"
+          - "  &7Tem OP?: %player_is_op%"
+          - "  &7IP: &8%player_ip%"
+          - ""
+      invsee:
+        skull:
+          use: false
+        slot: 20
+        material: "CHEST"
+        data: 0
+        nome: "&6Inventário"
+        lore:
+          - ""
+          - "&eClique aqui para abrir"
+          - "&eo INVENTÁRIO do jogador!"
+          - ""
+      teleport:
+        skull:
+          use: false
+        slot: 29
+        material: "EYE_OF_ENDER"
+        data: 0
+        nome: "&aTeletransporte"
+        lore:
+          - ""
+          - "&aClique aqui para efetuar o teleporte!"
+          - ""
+          - "&7Ações:"
+          - "  &8&lRIGHT-CLICK:"
+          - "  &8- &rTeleportar-se ate o jogador"
+          - ""
+          - "  &8&lLEFT-CLICK:"
+          - "  &8- &rTeleportar jogador ate o você"
+          - ""
+      voltar:
+        skull:
+          use: false
+        slot: 45
+        material: "ARROW"
+        data: 0
+        nome: "&cVoltar"
+        lore:
+          - ""
+          - "&eClique aqui para voltar a lista de jogadores."
+          - ""
+      1-no:
+        skull:
+          use: false
+        slot: 13
+        material: "STAINED_GLASS_PANE"
+        data: 15
+        nome: "&C"
+        lore:
+          - "&C"
+      2-no:
+        skull:
+          use: false
+        slot: 22
+        material: "STAINED_GLASS_PANE"
+        data: 15
+        nome: "&C"
+        lore:
+          - "&C"
+      3-no:
+        skull:
+          use: false
+        slot: 31
+        material: "STAINED_GLASS_PANE"
+        data: 15
+        nome: "&C"
+        lore:
+          - "&C"
+      4-no:
+        skull:
+          use: false
+        slot: 40
+        material: "STAINED_GLASS_PANE"
+        data: 15
+        nome: "&C"
+        lore:
+          - "&C"

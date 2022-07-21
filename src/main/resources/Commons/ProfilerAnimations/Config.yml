@@ -1,0 +1,81 @@
+ProfilerAnimations:
+  Menu_Primario:
+    1:
+      slot: 1
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+    2:
+      slot: 2
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+    3:
+      slot: 3
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+    4:
+      slot: 4
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+  Menu_actions:
+    1:
+      Assobio 1: ""
+      Assobio 2: ""
+      Assobio 3: ""
+      Socorro Masculino: ""
+      Socorro Feminino: ""
+      Socorro Masculino Ingles: ""
+      Socorro Feminino Ingles: ""
+
+    2:
+      slot: 2
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+    3:
+      slot: 3
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"
+
+    4:
+      slot: 4
+      material: "DIAMOND_BLOCK"
+      data: 0
+      nome: "&cTeste"
+      lore:
+        - "&ca"
+        - "&cb %vault_eco_balance%"
+        - "&cc"

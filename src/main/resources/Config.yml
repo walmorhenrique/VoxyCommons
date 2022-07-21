@@ -1,0 +1,17 @@
+#Está é a configuração principal, onde poderá habilitar ou desabilitar algum sistema do plugin.
+#True = sistema habilitado, false = sistema desabilitado.
+
+Commons:
+  ProfilerAnimations: false
+  Essentials: false
+  Modo staff: true
+
+#Sistema de reload desabilitado, ignore a configuração abaixo.
+Mensagens:
+  Reload: '&cO plugin foi recarregado com sucesso!'
+  Ajuda:
+    - ''
+    - '&eCommons Commands'
+    - ''
+    - /commons reload
+    - ''

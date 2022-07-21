@@ -1,0 +1,9 @@
+name: VoxyCommons
+version: '${version}'
+main: net.voxycommons.Main
+softdepend:
+  - PlaceholderAPI
+Authors: [wHenriqueLSH_ ,_NightOFDays_, TheLipe, zRomaGOD_]
+commands:
+  cstaff:
+    aliases: [st]

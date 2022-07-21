@@ -1,0 +1,18 @@
+Mensagens:
+  Teleportes:
+    Actionbar puxar target ate voce: "&eVocê teleportou {target} ate você!"
+    Actionbar teleportar ate target: "&eVocê se teleportou ate {target}!"
+    Voce nao pode teleportar a si mesmo: "&cVocê não pode teleportar à si mesmo."
+  Inventario:
+    Voce nao pode abrir seu proprio inventario: "&cVocê não pode abrir seu proprio inventario!"
+  Outros:
+    Jogador off ou null: "&cEste jogador não está mais online."
+
+Permissions:
+  use: "staff.use"
+  invsee use: "staff.invsee"
+  message sem perm: "&cVocê não tem permissao!"
+
+Sounds:
+  open menu: "CHEST_OPEN"
+  sound error: "VILLAGER_NO"

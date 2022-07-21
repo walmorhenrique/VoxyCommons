@@ -1,0 +1,88 @@
+// Plugins
+plugins {
+    id 'java'
+
+    // ShadowJar
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+
+    // Lombok
+    id "io.freefair.lombok" version "6.4.3"
+}
+
+// Configuração do Gradle
+group = 'net.voxycommons'
+version = '1.0'
+
+// Iniciar ShadowJar
+tasks.build.dependsOn('shadowJar')
+
+// Repositórios
+repositories {
+    mavenCentral()
+
+    // Spigot
+    maven {name = 'spigotmc-repo'; url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'}
+    maven {name = 'sonatype'; url = 'https://oss.sonatype.org/content/groups/public/'}
+
+    // Diversas dependências
+    maven {url 'https://jitpack.io'}
+
+    // PlaceholderAPI
+    maven {url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'}
+
+    // ProtocolLib
+    maven { url "https://repo.dmulloy2.net/repository/public/" }
+}
+
+// Dependências
+dependencies {
+    implementation 'org.jetbrains:annotations:23.0.0'
+    implementation 'com.github.HenryFabio:inventory-api:main-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'net.md-5:bungeecord-api:1.19-R0.1-SNAPSHOT'
+
+    // Dependências em .jar que ficam na pasta base do plugin chamada "libs"
+    compileOnly fileTree('libs')
+
+    compileOnly 'net.luckperms:api:5.4'
+    compileOnly "com.github.MilkBowl:VaultAPI:1.7.1"
+    compileOnly 'me.clip:placeholderapi:2.11.1'
+    compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.8.0";
+}
+
+// Configuração do ShadowJar
+shadowJar {
+    archiveName("${project.name}.jar")
+}
+
+def targetJavaVersion = 8
+java {
+    def javaVersion = JavaVersion.toVersion(targetJavaVersion)
+    sourceCompatibility = javaVersion
+    targetCompatibility = javaVersion
+    if (JavaVersion.current() < javaVersion) {
+        toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    if (targetJavaVersion >= 10 || JavaVersion.current().isJava10Compatible()) {
+        options.release = targetJavaVersion
+    }
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties props
+    filteringCharset 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+compileJava {
+    options.encoding('UTF-8')
+
+    sourceCompatibility('1.8')
+    targetCompatibility('1.8')
+}

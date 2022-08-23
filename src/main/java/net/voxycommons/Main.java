@@ -1,5 +1,4 @@
 package net.voxycommons;
-//74
 
 import com.henryfabio.minecraft.inventoryapi.manager.InventoryManager;
 import net.voxycommons.utils.YmlConfigConstructor;

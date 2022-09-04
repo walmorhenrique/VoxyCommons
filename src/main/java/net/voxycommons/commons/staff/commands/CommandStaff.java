@@ -8,6 +8,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import static net.voxycommons.utils.InventoryConstructor.InvCreate;
 import static net.voxycommons.utils.YmlConfigurator.CStaff;
 
 public class CommandStaff implements CommandExecutor {

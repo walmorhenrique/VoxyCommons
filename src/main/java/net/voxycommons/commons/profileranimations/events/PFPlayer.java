@@ -1,15 +1,15 @@
 package net.voxycommons.commons.profileranimations.events;
 
-import net.voxycommons.utils.YmlConfigurator;
-import org.bukkit.entity.Player;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.inventory.Inventory;
+import org.bukkit.event.entity.*;
+import net.voxycommons.utils.*;
+import org.bukkit.entity.*;
+import org.bukkit.inventory.*;
 
 public class PFPlayer {
 
     public static void eventPlayerDeath(PlayerDeathEvent e) {
-        if(YmlConfigurator.Cconfig.getBoolean("Commons.ProfilerAnimations")) {
-            Player p = (Player) e.getEntity();
+        if (YmlConfigurator.Cconfig.getBoolean("commons.profileranimations")) {
+            Player p = e.getEntity();
             Inventory inv = p.getOpenInventory().getTopInventory();
             inv.clear();
         }

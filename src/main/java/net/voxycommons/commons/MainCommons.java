@@ -1,34 +1,51 @@
 package net.voxycommons.commons;
 
-import net.voxycommons.Main;
-import net.voxycommons.listerners.InventoryE;
-import net.voxycommons.listerners.PlayerE;
-import org.bukkit.Bukkit;
-
-import static net.voxycommons.commons.essentials.MainEssentials.loadEssentials;
-import static net.voxycommons.commons.essentials.MainEssentials.unloadEssentials;
-import static net.voxycommons.commons.profileranimations.MainProfilerAnimations.loadProfilerAnimations;
-import static net.voxycommons.commons.profileranimations.MainProfilerAnimations.unloadProfilerAnimations;
-import static net.voxycommons.commons.staff.MainStaff.loadStaff;
-import static net.voxycommons.commons.staff.MainStaff.unloadStaff;
+import net.voxycommons.commons.essentials.*;
+import net.voxycommons.commons.profileranimations.*;
+import net.voxycommons.commons.staff.*;
+import net.voxycommons.commons.uteis.*;
+import net.voxycommons.commons.curas.*;
+import org.bukkit.*;
+import net.voxycommons.*;
+import net.voxycommons.commons.curas.commands.*;
+import net.voxycommons.commons.staff.commands.*;
+import net.voxycommons.Schedulers.*;
+import net.voxycommons.listerners.*;
 
 public class MainCommons {
-
-    public static void loadCommons(){
+    public static void loadCommons() {
         loadEvents();
-        loadEssentials();
-        loadProfilerAnimations();
-        loadStaff();
+        MainEssentials.loadEssentials();
+        MainProfilerAnimations.loadProfilerAnimations();
+        MainStaff.loadStaff();
+        MainUteis.loadUteis();
+        MainCuras.loadCuras();
+        Commands();
+        enableSchedulers();
     }
-
-    public static void unloadCommons(){
-        unloadEssentials();
-        unloadProfilerAnimations();
-        unloadStaff();
+    
+    public static void unloadCommons() {
+        Bukkit.getScheduler().cancelTasks(Main.getInstance());
+        MainEssentials.unloadEssentials();
+        MainProfilerAnimations.unloadProfilerAnimations();
+        MainStaff.unloadStaff();
+        MainUteis.unloadUteis();
+        MainCuras.unloadCuras();
     }
-
-    public static void loadEvents(){
+    
+    public static void Commands() {
+        Main.getInstance().getCommand("curas").setExecutor(new CurasCommand());
+        Main.getInstance().getCommand("cstaff").setExecutor(new CommandStaff());
+    }
+    
+    public static void enableSchedulers() {
+        Scheduler.StartScheduler();
+    }
+    
+    public static void loadEvents() {
         Bukkit.getPluginManager().registerEvents(new InventoryE(), Main.getInstance());
         Bukkit.getPluginManager().registerEvents(new PlayerE(), Main.getInstance());
+        Bukkit.getPluginManager().registerEvents(new NaturalE(), Main.getInstance());
+        Bukkit.getPluginManager().registerEvents(new RegionE(), Main.getInstance());
     }
 }

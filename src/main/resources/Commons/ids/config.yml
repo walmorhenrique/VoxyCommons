@@ -1,0 +1,35 @@
+Mensagens:
+  SemPermissao: 'Comando não encontrado.'
+  Reloaded: '&aArquivos de configuração recarregados com sucesso.'
+  Desagrupe: '&cVocê precisa desagrupar esses itens para poder usa-los.'
+  addItem: '&eVocê adicionou o id &7<item> &ecom sucesso na lista.'
+  removeItem: '&eVocê removeu o id &7<item> &ecom sucesso da lista.'
+  invalidHandItemMessage: '&cColoque um item válido na sua mão.'
+  jaExiste: '&cEste item já está adicionado na lista.'
+  nExiste: '&cEste item não está adicionado na lista.'
+  hasId: '&cEste item já tem um id.'
+  adicionadoId: '&aVocê adicionou com sucesso um id neste item.'
+  noHasId: '&cEste item não tem um id.'
+  Id: '&eID do Item: &7<id>'
+  ComandosAjuda:
+    - ''
+    - ' &6&l➥ Sistema de IDs &8- &eComandos disponíveis:'
+    - '  &6• &e/id adicionar &8- &7&oAdicionar o item na sua mão na lista de itens.'
+    - '  &6• &e/id remover &8- &7&oRemover o item na sua mão da lista de itens.'
+    - '  &6• &e/id id &8- &7&oAdicionar um id ao item na sua mão.'
+    - '  &6• &e/id verid &8- &7&oVer o id do item em sua mão.'
+    - '  &6• &e/id reload &8- &7&oRecarregar os arquivos de configuração.'
+    - '  &6• &e/id ajuda &8- &7&oVer a mensagem de ajuda.'
+    - ''
+Regions:
+  exemplo1:
+    AdicionarID: true
+    Lore: '&8ID Exemplo: <id> <temporada>'
+  exemplo2:
+    AdicionarID: false
+    Lore: Nada
+IDs:
+  Lore: '&8ID: <id> #<temporada>'
+  Temporada: '1'
+  AllowedItens: []
+  List: []

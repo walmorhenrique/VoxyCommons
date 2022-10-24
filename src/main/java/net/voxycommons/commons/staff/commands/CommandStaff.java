@@ -1,41 +1,39 @@
 package net.voxycommons.commons.staff.commands;
 
-import net.voxycommons.commons.staff.MainStaff;
-import net.voxycommons.utils.ActionBar;
-import org.bukkit.Sound;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
-import static net.voxycommons.utils.InventoryConstructor.InvCreate;
-import static net.voxycommons.utils.YmlConfigurator.CStaff;
+import org.bukkit.command.*;
+import org.bukkit.entity.*;
+import net.voxycommons.*;
+import org.bukkit.*;
+import net.voxycommons.commons.staff.*;
+import net.voxycommons.utils.*;
 
 public class CommandStaff implements CommandExecutor {
-
-    @Override
     public boolean onCommand(CommandSender sender, Command c, String s, String[] args) {
-        if(!(sender instanceof Player)) {
+        if (!(sender instanceof Player)) {
             sender.sendMessage("§cEsse comando é apenas para jogadores!");
             return false;
         }
 
-        Player p = (Player) sender;
+        Player p = (Player)sender;
 
-        if(args.length > 0) {
+        if (!YmlConfigurator.Cconfig.getBoolean("commons.modo staff")) {
+            p.sendMessage(Main.Config.getConfig().getString("Mensagens.Comando"));
+            return true;
+        }
+
+        if (args.length > 0) {
             p.sendMessage("§cComando inválido, use: /" + c.getName());
-            p.playSound(p.getLocation(), Sound.valueOf(CStaff.getString("Sounds.sound error")), 1f, 1f);
+            p.playSound(p.getLocation(), Sound.valueOf(YmlConfigurator.CStaff.getString("Sounds.sound error")), 1.0f, 1.0f);
             return false;
         }
 
-        if(p.hasPermission(CStaff.getString("Permissions.use"))) {
-            //p.openInventory(InvCreate(p, null, null, "Menu_Primario", CStaff));
+        if (p.hasPermission(YmlConfigurator.CStaff.getString("Permissions.use"))) {
             MainStaff.getListInventory().openInventory(p);
-            p.playSound(p.getLocation(), Sound.valueOf(CStaff.getString("Sounds.open menu")), 1f, 1f);
+            p.playSound(p.getLocation(), Sound.valueOf(YmlConfigurator.CStaff.getString("Sounds.open menu")), 1.0f, 1.0f);
 
         } else {
-            ActionBar.send(p, CStaff.getString("Permissions.message sem perm").replace("&", "§"));
-            p.playSound(p.getLocation(), Sound.valueOf(CStaff.getString("Sounds.sound error")), 1f, 1f);
+            Utils.sendAtionbar(p, YmlConfigurator.CStaff.getString("Permissions.message sem perm").replace("&", "§"));
+            p.playSound(p.getLocation(), Sound.valueOf(YmlConfigurator.CStaff.getString("Sounds.sound error")), 1.0f, 1.0f);
         }
         return false;
     }

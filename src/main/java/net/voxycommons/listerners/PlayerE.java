@@ -1,45 +1,49 @@
 package net.voxycommons.listerners;
 
-import net.voxycommons.commons.essentials.events.EssentialsPlayer;
-import net.voxycommons.commons.profileranimations.events.PFPlayer;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
-import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.entity.*;
+import net.voxycommons.commons.profileranimations.events.*;
+import net.voxycommons.commons.curas.events.*;
+import org.bukkit.entity.*;
+import org.bukkit.event.*;
+import net.voxycommons.commons.essentials.events.*;
+import org.bukkit.event.player.*;
 
 public class PlayerE implements Listener {
 
     @EventHandler
-    public void onPlayerDeath(PlayerDeathEvent e){
+    public void onPlayerDeath(PlayerDeathEvent e) {
         Player p = e.getEntity();
 
-        //Classes Events
-
+        ///
         PFPlayer.eventPlayerDeath(e);
-
-        //Classes Events
+        Events.onDeathCuras(p);
+        ///
     }
-
+    
     @EventHandler
-    public void onPlayerLeave(PlayerQuitEvent e){
+    public void onPlayerLeave(PlayerQuitEvent e) {
         Player p = e.getPlayer();
 
-        //Classes Events
-
-        //Classes Events
+        ///
+        Events.onQuitCuras(p);
+        ///
     }
-
+    
     @EventHandler
     public void onCommand(PlayerCommandPreprocessEvent e) {
         Player p = e.getPlayer();
 
-        //Classes Events
-
+        ///
         EssentialsPlayer.eventsOnCommand(p, e);
-
-        //Classes Events
+        ///
     }
+    
+    @EventHandler
+    public void onInteract(PlayerInteractEvent e) {
+        Player p = e.getPlayer();
 
+        ///
+        Events.onInteractCuras(p, e);
+        ///
+    }
 }

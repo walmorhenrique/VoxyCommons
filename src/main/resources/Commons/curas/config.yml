@@ -1,0 +1,55 @@
+#Permissoes:
+# voxycuras.admin (comando de ajuda, administracao e etc)
+Options:
+  Usar por nome: false
+
+Mensagens: #para desativar uma mensagem deixe ""
+  SemPermissao: "&fComando desconhecido."
+  JogadorNaoEcontrado: "&cEste jogador não foi encontrado."
+  Reloaded: "&aReiniciado com sucesso."
+  CuraInexistente: "&cEste item de cura não existe."
+  QuantidadeInvalida: "&cInsira um valor válido."
+  Enviado: "<item> <quantia> <nick>"
+  ComandosAjuda:
+    - ""
+    - "&4&lCURAS &8- &cAjuda"
+    - "&c/curas give (nome) (jogador) (quantidade) &8- &7Enviar uma cura para um jogador."
+    - "&c/curas ajuda &8- &7Comando de ajuda."
+    - "&c/curas reload &8- &7Recarregar os arquivos de configuração."
+    - ""
+
+Actionbar:
+  Delay kitmedico: "&fUsando kit médico... &7[<progress>&7]"
+  Delay bandagem: "&fUsando bandagem... &7[<progress>&7]"
+  Curado: "&a+<vida> &c<coracao>"
+  Cheio: "&cVocê já está com sua vida no máximo!"
+
+Item nome:
+  kitmedico: "&aKit Médico"
+  bandagem: "&aBandagem"
+
+curas:
+  kitmedico:
+    Cura: 20.0
+    Delay: 5
+    Item:
+      Nome: "&bKit Médico &c+10 ❤"
+      Skull: "null"
+      Material: EMERALD
+      Data: 0
+      Lore:
+        - "&7Utilize para curar seus ferimentos, cura 10 corações mas tem"
+        - "&7um delay de 10 segundos para usar outro item de cura novamente."
+        - "&bItem Raro"
+  bandagem:
+    Cura: 5
+    Delay: 3
+    Item:
+      Nome: "&aBandagem &c+5 ❤"
+      Skull: "null"
+      Material: PAPER
+      Data: 0
+      Lore:
+        - "&7Utilize para curar seus ferimentos, cura 5 corações mas tem"
+        - "&7um delay de 5 segundos para usar outro item de cura novamente."
+        - "&aItem Incomum"

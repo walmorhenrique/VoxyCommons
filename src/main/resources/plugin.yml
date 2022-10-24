@@ -1,11 +1,11 @@
 name: VoxyCommons
-version: '${version}'
+version: '1.0'
 main: net.voxycommons.Main
 softdepend:
   - PlaceholderAPI
-Authors: [wHenriqueLSH_ ,_NightOFDays_, TheLipe, zRomaGOD_]
+Authors: [wHenriqueLSH_]
 commands:
   cstaff:
     aliases: [st]
-  gamemode:
-    aliases: [gm]
+  curas:
+    aliases: [cura]

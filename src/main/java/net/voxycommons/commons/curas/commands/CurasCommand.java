@@ -24,7 +24,7 @@ public class CurasCommand implements CommandExecutor {
         Player p = (Player) s;
 
         if (!YmlConfigurator.Cconfig.getBoolean("commons.curas")) {
-            p.sendMessage(Main.Config.getConfig().getString("Mensagens.Comando"));
+            p.sendMessage(Main.Config.get().getString("Mensagens.Comando"));
             return true;
         }
 
@@ -41,7 +41,7 @@ public class CurasCommand implements CommandExecutor {
         }
 
         if (a[0].equalsIgnoreCase("reload")) {
-            Main.ConfigCuras.reloadConfig();
+            Main.ConfigCuras.reload();
             p.sendMessage("§cConfiguração recarregada!");
             return true;
         }

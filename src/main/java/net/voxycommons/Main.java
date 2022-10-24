@@ -5,6 +5,9 @@ import net.voxycommons.utils.*;
 import net.voxycommons.commons.*;
 import com.henryfabio.minecraft.inventoryapi.manager.*;
 
+import java.io.File;
+import java.util.List;
+
 public final class Main extends JavaPlugin {
 
     public static YmlConfigConstructor Config;
@@ -30,14 +33,19 @@ public final class Main extends JavaPlugin {
         MainCommons.unloadCommons();
     }
 
+    @Override
+    public List<Class<?>> getDatabaseClasses() {
+        return super.getDatabaseClasses();
+    }
+
     public void onLoadConfig() {
-        (Config = new YmlConfigConstructor(this, "config.yml")).saveDefaultConfig();
-        (ConfigEssentials = new YmlConfigConstructor(this, "commons/esentials/config.yml")).saveDefaultConfig();
-        (ConfigCuras = new YmlConfigConstructor(this, "commons/curas/config.yml")).saveDefaultConfig();
-        (ConfigProfilerAnimations = new YmlConfigConstructor(this, "commons/profileranimations/config.yml")).saveDefaultConfig();
-        (MenusProfilerAnimations = new YmlConfigConstructor(this, "commons/profileranimations/menus.yml")).saveDefaultConfig();
-        (ConfigStaff = new YmlConfigConstructor(this, "commons/staff/config.yml")).saveDefaultConfig();
-        (MenusStaff = new YmlConfigConstructor(this, "commons/staff/menus.yml")).saveDefaultConfig();
-        (ConfigUteis = new YmlConfigConstructor(this, "commons/uteis/config.yml")).saveDefaultConfig();
+        (Config = new YmlConfigConstructor(this, "config.yml", true)).save();
+        (ConfigEssentials = new YmlConfigConstructor(this, "config.yml", true, "/commons/esentials")).save();
+        (ConfigCuras = new YmlConfigConstructor(this, "config.yml", true, "/commons/curas")).save();
+        (ConfigProfilerAnimations = new YmlConfigConstructor(this, "config.yml", true, "/commons/profileranimations")).save();
+        (MenusProfilerAnimations = new YmlConfigConstructor(this, "menus.yml", true, "/commons/profileranimations")).save();
+        (ConfigStaff = new YmlConfigConstructor(this, "config.yml", true, "/commons/staff")).save();
+        (MenusStaff = new YmlConfigConstructor(this, "menus.yml", true, "/commons/staff")).save();
+        (ConfigUteis = new YmlConfigConstructor(this, "config.yml", true,"/commons/uteis")).save();
     }
 }

@@ -7,16 +7,16 @@ public class MainUteis
 {
     public static void loadUteis() {
         if (YmlConfigurator.Cconfig.getBoolean("commons.uteis")) {
-            Main.getInstance().getServer().getConsoleSender().sendMessage("ง7[VoxyCommons]งa Sistema uteis habilitado.");
+            Main.getInstance().getServer().getConsoleSender().sendMessage("ยง7[VoxyCommons]ยงa Sistema uteis habilitado.");
         }
         else {
-            Main.getInstance().getServer().getConsoleSender().sendMessage("ง7[VoxyCommons]งc Sistema uteis desabilitado.");
+            Main.getInstance().getServer().getConsoleSender().sendMessage("ยง7[VoxyCommons]ยงc Sistema uteis desabilitado.");
         }
     }
     
     public static void unloadUteis() {
         if (YmlConfigurator.Cconfig.getBoolean("commons.uteis")) {
-            Main.getInstance().getServer().getConsoleSender().sendMessage("ง7[VoxyCommons]งc Sistema uteis desabilitado.");
+            Main.getInstance().getServer().getConsoleSender().sendMessage("ยง7[VoxyCommons]ยงc Sistema uteis desabilitado.");
         }
     }
 }

@@ -9,6 +9,12 @@ import net.voxycommons.utils.*;
 
 public class CommandStaff implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command c, String s, String[] args) {
+        if(true) {
+            Main.reloadConfig("");
+
+            return false;
+        }
+
         if (!(sender instanceof Player)) {
             sender.sendMessage("§cEsse comando é apenas para jogadores!");
             return false;
@@ -17,7 +23,7 @@ public class CommandStaff implements CommandExecutor {
         Player p = (Player)sender;
 
         if (!YmlConfigurator.Cconfig.getBoolean("commons.modo staff")) {
-            p.sendMessage(Main.Config.getConfig().getString("Mensagens.Comando"));
+            p.sendMessage(Main.Config.get().getString("Mensagens.Comando"));
             return true;
         }
 

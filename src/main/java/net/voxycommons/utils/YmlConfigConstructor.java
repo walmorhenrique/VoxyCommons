@@ -1,86 +1,49 @@
 package net.voxycommons.utils;
 
-import com.google.common.io.Files;
-import org.bukkit.Bukkit;
-import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.Plugin;
-
+import net.voxycommons.*;
+import org.bukkit.plugin.java.*;
+import org.bukkit.configuration.file.*;
 import java.io.*;
-import java.nio.channels.Channels;
-import java.util.logging.Level;
-
-/*
- *  Project: Utils in Configs
- *     by LikeWhat
- */
 
 public class YmlConfigConstructor {
 
-    private FileConfiguration config = null;
-
-    private File file = null;
-
-    private final boolean inPlugin;
-
-    private final String subfolder;
-    private final String filename;
-
-    private final Plugin plugin;
-
-    public YmlConfigConstructor(Plugin plugin, String filename, boolean internalFile, String... subfolder) {
-        this.plugin = plugin;
-        this.filename = filename;
-        this.subfolder = subfolder.length > 0 ? "plugins/" + plugin.getName() + "/" + subfolder[0] : "plugins/" + plugin.getName();
-        if (inPlugin = internalFile) {
-            try {
-                File outFile = new File(this.subfolder, filename);
-                Files.createParentDirs(outFile);
-                if (!outFile.exists()) {
-                    try (InputStream fileInputStream = plugin.getResource(filename); FileOutputStream fileOutputStream = new FileOutputStream(outFile)) {
-                        fileOutputStream.getChannel().transferFrom(Channels.newChannel(fileInputStream), 0, Integer.MAX_VALUE);
-                    } catch (FileNotFoundException e) {
-                        Bukkit.getLogger().log(Level.WARNING, "Failed to create File " + filename, e);
-                    }
-                }
-            } catch(Exception e) {
-                Bukkit.getLogger().log(Level.WARNING, "Failed to create File " + filename, e);
-            }
+    private final String fileName;
+    private final Main plugin;
+    private final File configFile;
+    private FileConfiguration fileConfiguration;
+    
+    public YmlConfigConstructor(final JavaPlugin plugin, final String fileName) {
+        if (plugin == null) {
+            throw new IllegalArgumentException("plugin cannot be null");
         }
-        get().options().copyDefaults(true);
-    }
-
-    public FileConfiguration get() {
-        if (config == null) {
-            reload();
+        this.plugin = (Main)plugin;
+        this.fileName = fileName;
+        final File dataFolder = plugin.getDataFolder();
+        if (dataFolder == null) {
+            throw new IllegalStateException();
         }
-        return config;
+        this.configFile = new File(plugin.getDataFolder(), fileName);
     }
-
-    public void save() {
-        try {
-            config.save(file);
-        } catch (Exception e) {
-            plugin.getLogger().log(Level.WARNING, "Failed to save File " + file.getName(), e);
+    
+    public void reloadConfig() {
+        this.fileConfiguration = YamlConfiguration.loadConfiguration(this.configFile);
+        final InputStream defConfigStream = this.plugin.getResource(this.fileName);
+        if (defConfigStream != null) {
+            final YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
+            this.fileConfiguration.setDefaults(defConfig);
         }
     }
-
-    public void reload() {
-        file = new File(subfolder, filename);
-        config = YamlConfiguration.loadConfiguration(file);
-        if (inPlugin) {
-            InputStream dataStream = plugin.getResource(filename);
-            if (dataStream != null) {
-                config.setDefaults(YamlConfiguration.loadConfiguration(new InputStreamReader(dataStream)));
-            }
+    
+    public FileConfiguration getConfig() {
+        if (this.fileConfiguration == null) {
+            this.reloadConfig();
+        }
+        return this.fileConfiguration;
+    }
+    
+    public void saveDefaultConfig() {
+        if (!this.configFile.exists()) {
+            this.plugin.saveResource(this.fileName, false);
         }
     }
-
-    public File getFile() {
-        if (file == null) {
-            reload();
-        }
-        return file;
-    }
-
 }

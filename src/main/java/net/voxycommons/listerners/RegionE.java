@@ -1,9 +1,8 @@
 package net.voxycommons.listerners;
 
+import org.bukkit.entity.*;
+import org.bukkit.event.*;
 import com.mewin.WGRegionEvents.events.*;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 
 public class RegionE implements Listener {
 

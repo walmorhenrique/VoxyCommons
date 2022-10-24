@@ -16,7 +16,7 @@ import org.bukkit.inventory.ItemStack;
 public class StaffInventory {
 
     public static void eventActions(Player p, InventoryClickEvent e) {
-        if (YmlConfigurator.Cconfig.getBoolean("commons.Modo staff")) {
+        if (YmlConfigurator.Cconfig.getBoolean("commons.modo staff")) {
             ItemStack item = e.getCurrentItem();
 
             if (e.getInventory().getTitle().equalsIgnoreCase("§8Jogadores ONLINES")) {
@@ -38,6 +38,7 @@ public class StaffInventory {
                     }
                     p.openInventory(InventoryConstructor.InvCreateInfoHolder(target, target, "Menu_Target", YmlConfigurator.MStaff));
                 }
+
             } else if (e.getInventory().getHolder() instanceof InfoHolderStaff) {
                 e.setCancelled(true);
                 final InfoHolderStaff infoHolder = (InfoHolderStaff) e.getInventory().getHolder();

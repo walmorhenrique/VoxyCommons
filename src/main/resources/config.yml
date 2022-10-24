@@ -2,19 +2,19 @@
 #True = sistema habilitado, false = sistema desabilitado.
 
 commons:
-  profilerAnimations: false
+  profileranimations: true
   curas: true
   uteis: true
-  essentials: false
-  modo staff: false
+  essentials: true
+  modo staff: true
 
 #Sistema de reload desabilitado, ignore a configuração abaixo.
 Mensagens:
   Comando: "Comando não encontrado."
-  Reload: '&cO plugin foi recarregado com sucesso!'
+  Reload: "&cO plugin foi recarregado com sucesso!"
   Ajuda:
-    - ''
-    - '&eCommons Commands'
-    - ''
-    - '/commons reload'
-    - ''
+    - ""
+    - "&eCommons Commands"
+    - ""
+    - "/commons reload"
+    - ""

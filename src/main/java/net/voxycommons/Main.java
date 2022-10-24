@@ -13,6 +13,7 @@ public final class Main extends JavaPlugin {
     public static YmlConfigConstructor ConfigEssentials;
     public static YmlConfigConstructor ConfigCuras;
     public static YmlConfigConstructor ConfigUteis;
+    public static YmlConfigConstructor ConfigIds;
     public static YmlConfigConstructor ConfigStaff;
     public static YmlConfigConstructor MenusStaff;
     public static YmlConfigConstructor ConfigProfilerAnimations;
@@ -49,5 +50,7 @@ public final class Main extends JavaPlugin {
         (ConfigStaff = new YmlConfigConstructor(this, "config.yml", true, "/commons/staff")).save();
 
         (ConfigUteis = new YmlConfigConstructor(this, "config.yml", true,"/commons/uteis")).save();
+
+        (ConfigIds = new YmlConfigConstructor(this, "config.yml", true,"/commons/ids")).save();
     }
 }

@@ -4,6 +4,7 @@ main: net.voxycommons.Main
 softdepend:
   - PlaceholderAPI
 Authors: [wHenriqueLSH_]
+
 commands:
   cstaff:
     aliases: [st]

@@ -8,7 +8,7 @@ public class MainStaff {
     private static ListInventory listInventory;
     
     public static void loadStaff() {
-        if (YmlConfigurator.Cconfig.getBoolean("commons.Modo staff")) {
+        if (YmlConfigurator.Cconfig.getBoolean("commons.modo staff")) {
             Main.getInstance().getServer().getConsoleSender().sendMessage("§7[VoxyCommons]§a Sistema staff habilitado.");
             MainStaff.listInventory = new ListInventory();
         } else {
@@ -17,7 +17,7 @@ public class MainStaff {
     }
     
     public static void unloadStaff() {
-        if (YmlConfigurator.Cconfig.getBoolean("commons.Modo staff")) {
+        if (YmlConfigurator.Cconfig.getBoolean("commons.modo staff")) {
             Main.getInstance().getServer().getConsoleSender().sendMessage("§7[VoxyCommons]§c Sistema staff desabilitado.");
         }
     }

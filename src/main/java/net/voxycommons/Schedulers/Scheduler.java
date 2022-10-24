@@ -1,12 +1,10 @@
 package net.voxycommons.Schedulers;
 
-import org.bukkit.scheduler.*;
-import org.bukkit.*;
-import org.bukkit.entity.*;
-import net.voxycommons.commons.curas.schedulers.*;
-import java.util.*;
-import net.voxycommons.*;
-import org.bukkit.plugin.*;
+import net.voxycommons.Main;
+import net.voxycommons.commons.curas.schedulers.Schedulers;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class Scheduler
 {

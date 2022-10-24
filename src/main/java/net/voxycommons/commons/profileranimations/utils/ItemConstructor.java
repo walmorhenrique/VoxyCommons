@@ -1,11 +1,14 @@
 package net.voxycommons.commons.profileranimations.utils;
 
-import org.bukkit.entity.*;
-import org.bukkit.*;
-import net.voxycommons.utils.*;
-import me.clip.placeholderapi.*;
-import java.util.stream.*;
-import org.bukkit.inventory.*;
+import me.clip.placeholderapi.PlaceholderAPI;
+import net.voxycommons.utils.ItemBuilder;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.stream.Collectors;
 
 public class ItemConstructor {
 

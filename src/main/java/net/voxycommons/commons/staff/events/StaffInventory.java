@@ -1,12 +1,17 @@
 package net.voxycommons.commons.staff.events;
 
-import org.bukkit.event.inventory.*;
-import org.bukkit.*;
-import net.voxycommons.commons.staff.playerlist.*;
-import org.bukkit.entity.*;
-import net.voxycommons.utils.*;
-import net.voxycommons.commons.staff.*;
-import org.bukkit.inventory.*;
+import net.voxycommons.commons.staff.MainStaff;
+import net.voxycommons.commons.staff.playerlist.InfoHolderStaff;
+import net.voxycommons.utils.InventoryConstructor;
+import net.voxycommons.utils.Utils;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
+import org.bukkit.entity.Entity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class StaffInventory {
 

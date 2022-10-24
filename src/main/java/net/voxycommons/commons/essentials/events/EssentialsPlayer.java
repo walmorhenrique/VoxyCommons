@@ -1,8 +1,8 @@
 package net.voxycommons.commons.essentials.events;
 
-import org.bukkit.entity.*;
-import org.bukkit.event.player.*;
-import net.voxycommons.utils.*;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 
 public class EssentialsPlayer
 {

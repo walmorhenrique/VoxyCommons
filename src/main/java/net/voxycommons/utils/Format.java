@@ -1,6 +1,6 @@
 package net.voxycommons.utils;
 
-import java.text.*;
+import java.text.DecimalFormat;
 
 public final class Format {
     private static String[] charlist;

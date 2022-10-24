@@ -1,12 +1,15 @@
 package net.voxycommons.listerners;
 
-import org.bukkit.event.entity.*;
-import net.voxycommons.commons.profileranimations.events.*;
-import net.voxycommons.commons.curas.events.*;
-import org.bukkit.entity.*;
-import org.bukkit.event.*;
-import net.voxycommons.commons.essentials.events.*;
-import org.bukkit.event.player.*;
+import net.voxycommons.commons.curas.events.Events;
+import net.voxycommons.commons.essentials.events.EssentialsPlayer;
+import net.voxycommons.commons.profileranimations.events.PFPlayer;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerE implements Listener {
 

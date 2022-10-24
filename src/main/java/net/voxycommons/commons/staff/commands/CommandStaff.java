@@ -1,20 +1,17 @@
 package net.voxycommons.commons.staff.commands;
 
-import org.bukkit.command.*;
-import org.bukkit.entity.*;
-import net.voxycommons.*;
-import org.bukkit.*;
-import net.voxycommons.commons.staff.*;
-import net.voxycommons.utils.*;
+import net.voxycommons.Main;
+import net.voxycommons.commons.staff.MainStaff;
+import net.voxycommons.utils.Utils;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Sound;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
 public class CommandStaff implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command c, String s, String[] args) {
-        if(true) {
-            Main.reloadConfig("");
-
-            return false;
-        }
-
         if (!(sender instanceof Player)) {
             sender.sendMessage("§cEsse comando é apenas para jogadores!");
             return false;

@@ -1,10 +1,11 @@
 package net.voxycommons.commons.curas.schedulers;
 
-import org.bukkit.entity.*;
-import net.voxycommons.commons.curas.*;
-import net.voxycommons.commons.curas.events.*;
-import org.bukkit.*;
-import net.voxycommons.utils.*;
+import net.voxycommons.commons.curas.MainCuras;
+import net.voxycommons.commons.curas.events.Events;
+import net.voxycommons.utils.Utils;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 public class Schedulers {
 

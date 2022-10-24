@@ -1,16 +1,19 @@
 package net.voxycommons.commons;
 
-import net.voxycommons.commons.essentials.*;
-import net.voxycommons.commons.profileranimations.*;
-import net.voxycommons.commons.staff.*;
-import net.voxycommons.commons.uteis.*;
-import net.voxycommons.commons.curas.*;
-import org.bukkit.*;
-import net.voxycommons.*;
-import net.voxycommons.commons.curas.commands.*;
-import net.voxycommons.commons.staff.commands.*;
-import net.voxycommons.Schedulers.*;
-import net.voxycommons.listerners.*;
+import net.voxycommons.Main;
+import net.voxycommons.Schedulers.Scheduler;
+import net.voxycommons.commons.curas.MainCuras;
+import net.voxycommons.commons.curas.commands.CurasCommand;
+import net.voxycommons.commons.essentials.MainEssentials;
+import net.voxycommons.commons.profileranimations.MainProfilerAnimations;
+import net.voxycommons.commons.staff.MainStaff;
+import net.voxycommons.commons.staff.commands.CommandStaff;
+import net.voxycommons.commons.uteis.MainUteis;
+import net.voxycommons.listerners.InventoryE;
+import net.voxycommons.listerners.NaturalE;
+import net.voxycommons.listerners.PlayerE;
+import net.voxycommons.listerners.RegionE;
+import org.bukkit.Bukkit;
 
 public class MainCommons {
     public static void loadCommons() {

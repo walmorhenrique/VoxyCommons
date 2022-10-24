@@ -1,8 +1,8 @@
 package net.voxycommons.commons.staff;
 
-import net.voxycommons.commons.staff.playerlist.*;
-import net.voxycommons.utils.*;
-import net.voxycommons.*;
+import net.voxycommons.Main;
+import net.voxycommons.commons.staff.playerlist.ListInventory;
+import net.voxycommons.utils.YmlConfigurator;
 
 public class MainStaff {
     private static ListInventory listInventory;

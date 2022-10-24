@@ -1,20 +1,25 @@
 package net.voxycommons.commons.staff.playerlist;
 
-import com.henryfabio.minecraft.inventoryapi.inventory.impl.paged.*;
-import com.henryfabio.minecraft.inventoryapi.viewer.impl.paged.*;
-import com.henryfabio.minecraft.inventoryapi.viewer.configuration.impl.*;
-import com.henryfabio.minecraft.inventoryapi.viewer.*;
-import com.henryfabio.minecraft.inventoryapi.editor.*;
-import com.henryfabio.minecraft.inventoryapi.item.enums.*;
-import java.util.stream.*;
-import com.henryfabio.minecraft.inventoryapi.item.*;
-import org.bukkit.inventory.*;
-import org.bukkit.inventory.meta.*;
-import com.henryfabio.minecraft.inventoryapi.item.supplier.*;
-import org.bukkit.*;
-import org.bukkit.entity.*;
-import net.voxycommons.utils.*;
-import java.util.*;
+import com.henryfabio.minecraft.inventoryapi.editor.InventoryEditor;
+import com.henryfabio.minecraft.inventoryapi.inventory.impl.paged.PagedInventory;
+import com.henryfabio.minecraft.inventoryapi.item.InventoryItem;
+import com.henryfabio.minecraft.inventoryapi.item.enums.DefaultItem;
+import com.henryfabio.minecraft.inventoryapi.item.supplier.InventoryItemSupplier;
+import com.henryfabio.minecraft.inventoryapi.viewer.Viewer;
+import com.henryfabio.minecraft.inventoryapi.viewer.configuration.impl.ViewerConfigurationImpl;
+import com.henryfabio.minecraft.inventoryapi.viewer.impl.paged.PagedViewer;
+import net.voxycommons.utils.ItemBuilder;
+import net.voxycommons.utils.SkullBuilder;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListInventory extends PagedInventory {
 

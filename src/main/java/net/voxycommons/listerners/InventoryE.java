@@ -1,13 +1,14 @@
 package net.voxycommons.listerners;
 
-import org.bukkit.event.player.*;
-import org.bukkit.*;
-import net.voxycommons.commons.profileranimations.events.*;
-import org.bukkit.entity.*;
-import org.bukkit.event.*;
-import net.voxycommons.commons.staff.events.*;
-import org.bukkit.event.inventory.*;
-import org.bukkit.inventory.*;
+import net.voxycommons.commons.profileranimations.events.PFInventory;
+import net.voxycommons.commons.staff.events.StaffInventory;
+import org.bukkit.Achievement;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.player.PlayerAchievementAwardedEvent;
 
 public class InventoryE implements Listener {
     @EventHandler

@@ -1,8 +1,9 @@
 package net.voxycommons.commons.curas;
 
-import java.util.*;
-import net.voxycommons.utils.*;
-import net.voxycommons.*;
+import net.voxycommons.Main;
+import net.voxycommons.utils.YmlConfigurator;
+
+import java.util.HashMap;
 
 public class MainCuras {
     public static HashMap<String, Double> CurasDelayUse = new HashMap<>();

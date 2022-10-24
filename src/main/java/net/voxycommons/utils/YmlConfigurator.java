@@ -1,7 +1,7 @@
 package net.voxycommons.utils;
 
-import org.bukkit.configuration.file.*;
-import net.voxycommons.*;
+import net.voxycommons.Main;
+import org.bukkit.configuration.file.FileConfiguration;
 
 public class YmlConfigurator {
 

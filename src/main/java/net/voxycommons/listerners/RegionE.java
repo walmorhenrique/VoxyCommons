@@ -1,6 +1,7 @@
 package net.voxycommons.listerners;
 
-import com.mewin.WGRegionEvents.events.*;
+import com.mewin.WGRegionEvents.events.RegionEnterEvent;
+import com.mewin.WGRegionEvents.events.RegionLeaveEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

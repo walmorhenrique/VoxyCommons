@@ -1,12 +1,14 @@
 package net.voxycommons.utils;
 
-import org.bukkit.entity.*;
-import org.bukkit.configuration.file.*;
-import me.clip.placeholderapi.*;
-import org.bukkit.inventory.*;
-import java.util.stream.*;
-import org.bukkit.*;
-import net.voxycommons.commons.staff.playerlist.*;
+import me.clip.placeholderapi.PlaceholderAPI;
+import net.voxycommons.commons.staff.playerlist.InfoHolderStaff;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.Inventory;
+
+import java.util.stream.Collectors;
 
 public class InventoryConstructor {
 

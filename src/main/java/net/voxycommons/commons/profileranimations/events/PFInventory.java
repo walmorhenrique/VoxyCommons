@@ -1,12 +1,14 @@
 package net.voxycommons.commons.profileranimations.events;
 
-import org.bukkit.entity.*;
-import net.voxycommons.utils.*;
-import org.bukkit.*;
-import org.bukkit.inventory.*;
-import org.bukkit.event.inventory.*;
-import net.voxycommons.commons.profileranimations.utils.*;
-import org.bukkit.event.player.*;
+import net.voxycommons.commons.profileranimations.utils.ItemConstructor;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.GameMode;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryType;
+import org.bukkit.event.player.PlayerAchievementAwardedEvent;
+import org.bukkit.inventory.Inventory;
 
 public class PFInventory {
 

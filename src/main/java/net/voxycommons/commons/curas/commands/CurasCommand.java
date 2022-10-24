@@ -1,12 +1,18 @@
 package net.voxycommons.commons.curas.commands;
 
-import org.bukkit.command.*;
-import org.bukkit.entity.*;
-import net.voxycommons.*;
-import org.bukkit.*;
-import net.voxycommons.utils.*;
-import org.bukkit.inventory.*;
-import java.util.*;
+import net.voxycommons.Main;
+import net.voxycommons.utils.Format;
+import net.voxycommons.utils.ItemBuilder;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.List;
 
 public class CurasCommand implements CommandExecutor {
 

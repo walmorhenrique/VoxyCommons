@@ -1,7 +1,7 @@
 package net.voxycommons.commons.profileranimations;
 
-import net.voxycommons.utils.*;
-import net.voxycommons.*;
+import net.voxycommons.Main;
+import net.voxycommons.utils.YmlConfigurator;
 
 public class MainProfilerAnimations {
     public static void loadProfilerAnimations() {

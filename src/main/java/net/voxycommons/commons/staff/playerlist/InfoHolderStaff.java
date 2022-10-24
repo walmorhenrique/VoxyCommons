@@ -1,6 +1,7 @@
 package net.voxycommons.commons.staff.playerlist;
 
-import org.bukkit.inventory.*;
+import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.InventoryHolder;
 
 public class InfoHolderStaff implements InventoryHolder {
     private final String player;

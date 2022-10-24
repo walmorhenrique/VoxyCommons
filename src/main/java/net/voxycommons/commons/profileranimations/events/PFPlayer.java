@@ -1,9 +1,9 @@
 package net.voxycommons.commons.profileranimations.events;
 
-import org.bukkit.event.entity.*;
-import net.voxycommons.utils.*;
-import org.bukkit.entity.*;
-import org.bukkit.inventory.*;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.entity.Player;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.inventory.Inventory;
 
 public class PFPlayer {
 

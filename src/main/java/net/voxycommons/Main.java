@@ -1,11 +1,10 @@
 package net.voxycommons;
 
-import org.bukkit.plugin.java.*;
-import net.voxycommons.utils.*;
-import net.voxycommons.commons.*;
-import com.henryfabio.minecraft.inventoryapi.manager.*;
+import com.henryfabio.minecraft.inventoryapi.manager.InventoryManager;
+import net.voxycommons.commons.MainCommons;
+import net.voxycommons.utils.YmlConfigConstructor;
+import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
 import java.util.List;
 
 public final class Main extends JavaPlugin {
@@ -42,10 +41,13 @@ public final class Main extends JavaPlugin {
         (Config = new YmlConfigConstructor(this, "config.yml", true)).save();
         (ConfigEssentials = new YmlConfigConstructor(this, "config.yml", true, "/commons/esentials")).save();
         (ConfigCuras = new YmlConfigConstructor(this, "config.yml", true, "/commons/curas")).save();
-        (ConfigProfilerAnimations = new YmlConfigConstructor(this, "config.yml", true, "/commons/profileranimations")).save();
+
         (MenusProfilerAnimations = new YmlConfigConstructor(this, "menus.yml", true, "/commons/profileranimations")).save();
-        (ConfigStaff = new YmlConfigConstructor(this, "config.yml", true, "/commons/staff")).save();
+        (ConfigProfilerAnimations = new YmlConfigConstructor(this, "config.yml", true, "/commons/profileranimations")).save();
+
         (MenusStaff = new YmlConfigConstructor(this, "menus.yml", true, "/commons/staff")).save();
+        (ConfigStaff = new YmlConfigConstructor(this, "config.yml", true, "/commons/staff")).save();
+
         (ConfigUteis = new YmlConfigConstructor(this, "config.yml", true,"/commons/uteis")).save();
     }
 }

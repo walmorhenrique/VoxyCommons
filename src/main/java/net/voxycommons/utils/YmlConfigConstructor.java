@@ -1,19 +1,15 @@
 package net.voxycommons.utils;
 
-import com.google.common.io.Files;
+import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import java.io.*;
-import java.nio.channels.Channels;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.logging.Level;
-
-/*
- *  Project: Utils in Configs
- *     by LikeWhat
- */
 
 public class YmlConfigConstructor {
 
@@ -31,22 +27,21 @@ public class YmlConfigConstructor {
     public YmlConfigConstructor(Plugin plugin, String filename, boolean internalFile, String... subfolder) {
         this.plugin = plugin;
         this.filename = filename;
+
+        String path =  (subfolder.length > 0 ? subfolder[0] : "");
         this.subfolder = subfolder.length > 0 ? "plugins/" + plugin.getName() + "/" + subfolder[0] : "plugins/" + plugin.getName();
+
         if (inPlugin = internalFile) {
             try {
                 File outFile = new File(this.subfolder, filename);
-                Files.createParentDirs(outFile);
-                if (!outFile.exists()) {
-                    try (InputStream fileInputStream = plugin.getResource(filename); FileOutputStream fileOutputStream = new FileOutputStream(outFile)) {
-                        fileOutputStream.getChannel().transferFrom(Channels.newChannel(fileInputStream), 0, Integer.MAX_VALUE);
-                    } catch (FileNotFoundException e) {
-                        Bukkit.getLogger().log(Level.WARNING, "Failed to create File " + filename, e);
-                    }
-                }
+                InputStream stream = plugin.getClass().getResourceAsStream(path + "/" + filename);
+
+                if(stream != null) FileUtils.copyInputStreamToFile(stream, outFile);
             } catch(Exception e) {
                 Bukkit.getLogger().log(Level.WARNING, "Failed to create File " + filename, e);
             }
         }
+
         get().options().copyDefaults(true);
     }
 

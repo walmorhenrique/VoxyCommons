@@ -1,7 +1,8 @@
 package net.voxycommons.utils;
 
-import java.util.*;
-import java.text.*;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class NumberFormatter
 {

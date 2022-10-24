@@ -1,14 +1,16 @@
 package net.voxycommons.commons.curas.events;
 
-import org.bukkit.event.*;
-import org.bukkit.entity.*;
-import java.text.*;
-import net.voxycommons.utils.*;
-import net.voxycommons.commons.curas.*;
-import org.bukkit.event.player.*;
-import org.bukkit.event.block.*;
-import org.bukkit.*;
-import org.bukkit.inventory.*;
+import net.voxycommons.commons.curas.MainCuras;
+import net.voxycommons.utils.Utils;
+import net.voxycommons.utils.YmlConfigurator;
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+
+import java.text.DecimalFormat;
 
 public class Events implements Listener {
 

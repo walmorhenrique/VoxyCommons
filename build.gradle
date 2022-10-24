@@ -60,7 +60,3 @@ compileJava {
     sourceCompatibility('1.8')
     targetCompatibility('1.8')
 }
-
-allprojects {
-    libsDirName = "C:/Users/Thale/Documents/minecraft/clients/_NightOFDays_/server/plugins"
-}
